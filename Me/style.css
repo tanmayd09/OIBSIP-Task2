@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo{
+    height: 70px;
+    padding: 10px;
+    display: block;
+    margin: 1em;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20vh;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1em;
+}
+.list-items a{
+    color: rgb(203, 183, 183);
+    margin: 1em;
+    font-family: cursive;
+    cursor: pointer;
+    font-weight: 700;
+}
+.list-items a:hover{
+    color: #fff;
+}
+.hamburger{
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 90%;
+    transform: translate(-10%, -90%);
+}
+.line{
+    background-color: #fff;
+    height: 3px;
+    width: 30px;
+    margin: 3px;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+h1{
+    font-family: fantasy;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+}
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1,h2,h3{
+        color: #fff;
+        margin: 7px 0;
+}
+@media screen and (max-width: 600px){
+    .logo{
+        max-width: 70px;
+    }
+    nav{
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 100;
+        transform: translateX(100%);
+        transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+    }
+    .navlist{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 70vh;
+        margin-top: 3em;
+    }
+    .list-items a{
+        text-decoration: none;
+        font-size: 2em;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .line{
+        height: 3px;
+        width: 30px;
+        margin: 5px;
+        background-color: white;
+        transition: 0.5s;
+    }
+    .nav-open .nav{
+        transform: translateX(0%);
+    }
+    .nav-open .hamburger{
+        position: fixed;
+    }
+    .nav-open .line:nth-child(1){
+        transform: rotate(0.625turn);
+    }
+    .nav-open .line:nth-child(2){
+        display: none;
+    }
+    .nav-open .line:nth-child(3){
+        transform: rotate(-0.625turn);
+    }
+    h1{
+        font-size: large;
+        text-align: center;
+    }
+    h2,h3{
+        font-size: small;
+        text-align: center;
+    }
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.447);
+}
+.discription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+video{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+footer{
+      background-color: #fff;
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+.lgf{
+    display: flex;
+    height: 25px;
+    margin: 10px 0;
+}
+.btn-1{
+      height: 30px;
+      width: 100px;
+      background: none;
+      color: rgb(169, 166, 161);
+      border: none;
+      outline: none;
+      display: flex;
+      outline: 2px solid rgb(169, 166, 161);
+      margin: 1em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+}
+    .btn-1:hover{
+        color: #fff;
+        outline: 2px solid white;
+        background-color: black;
+}
+  p{
+      margin: 5px;
+}  
+h1:hover{
+    font-size: 4em;    
+}
+.abtd{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    display: flex;
+    flex-direction: row;
+}
+.abtd img{
+    box-shadow: 0.3em 0.5em 0.5em rgb(255, 255, 255);
+    transition: 0.5s all ease-in;
+}
+.abtd img:hover{
+    transform: translateY(-10px);
+}
+.abti{
+    height: 300px;
+  
+}
+.abt1{
+    padding: 2em;
+    color: rgb(199, 184, 184);
+    background-color: rgba(0, 0, 0, 0.74);
+    margin-left: 2em;
+}
+@media screen and (max-width: 950px){
+    .abtd{
+        flex-direction: column;
+    }
+    .abtc{
+        height: 100vh;
+    }
+}
+
+.ctcu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+.ctcd{
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 2em 3em;
+    width: 700px;
+    height: 400px;
+    border: 1px solid #fff;
+    transform: translateY(15px);
+    transform: translateX(45px);
+}
+.ctci{
+    border-radius: 5px;
+    box-shadow: 0.25em 0.25em 0.5em rgb(255, 255, 255);
+    margin: 3em;
+    transform: translateY(-50px);
+}
+form{
+    height: auto;
+    width: 300px;
+    margin-right: 3em;
+}
+form input{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    margin: 5px 1px;
+    background-color: none;
+    background: none;
+    color: #fff;
+}
+
+form input:focus{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: none;
+    background: none;
+}
+
+.ctcbtn{
+    background: rgb(199, 184, 184);
+    color: black;
+    height: 30px;
+    width: 90px;
+    margin-top: 1em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.ctcbtn:hover{
+    color: #fff;
+    background: black;
+}
+.extradiv{
+    display: flex;
+    justify-content: space-between;
+}
+.socialctc{
+    margin-top: 2em;
+}
+.ctcdes p{
+    cursor: pointer;
+}
+.socialctc i{
+    margin-right: 1em;
+    cursor: pointer;
+    color: rgb(199, 184, 184);
+}
+.ctcdes h3{
+    color: rgb(199, 184, 184);
+}
+.ctcdes p{
+    color: rgb(199, 184, 184);
+}
+.ctcdes p:hover{
+    color: #fff;
+}
+.socialctc i:hover{
+    color: white;
+}
